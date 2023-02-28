@@ -23,6 +23,8 @@ const DefaultLayout = ({ children, pageName }: Props) => {
   const isHaveUser =
     users?.statusCode !== serviceStatus?.UNAUTHORIZED && !isEmpty(users);
 
+  console.log({ isHaveUser });
+
   useGetUserProfile({ pageName });
 
   if (allowPage.includes(str) || isHaveUser)
